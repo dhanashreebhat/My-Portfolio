@@ -1,0 +1,35 @@
+# Dhanashree Bhat — Portfolio (React + Vite)
+
+A modern, animated personal portfolio website built with **React**, **Tailwind CSS**, **Framer Motion**, and **Lucide Icons**.
+
+## Features
+
+- **Hero section** with animated profile frame and typewriter role text
+- **Scroll progress bar** at the top of the page
+- **Mouse spotlight** background (soft radial glow following the cursor)
+- **Tech Stack** skills with logo
+- **Professional experience** with an interactive accordion (expand/collapse)
+- **Education** cards
+- **Projects** section with clickable repo links
+- **Hobbies** with icon cards
+- **Footer** with contact links
+
+---
+
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- lucide-react
+
+---
+
+## Getting Started
+
+```bash
+npm install
+
+npm run dev
+```
