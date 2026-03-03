@@ -33,7 +33,7 @@ const LINKS = {
   email: "dhanashreebhat10@gmail.com",
   github: "https://github.com/dhanashreebhat",
   linkedin: "http://linkedin.com/in/dhanashree-bhat",
-  cv: "/DhanashreeBhat_CV.pdf",
+  cv: "docs/DhanashreeBhat_CV.pdf",
 };
 
 /* =========================
@@ -902,7 +902,7 @@ export default function App() {
 
             <div className="relative w-52 h-72 md:w-72 md:h-[26rem] rounded-[2rem] overflow-hidden border-2 border-slate-800 bg-slate-900 shadow-2xl">
               <img
-                src="/headshot.jpeg"
+                src="docs\headshot.jpeg"
                 alt="Dhanashree Bhat"
                 className="w-full h-full object-cover object-[50%_8%] scale-[1.02] contrast-105 brightness-95 transition-transform duration-700 group-hover:scale-105"
               />
@@ -977,7 +977,7 @@ export default function App() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 href={LINKS.cv}
-                download="DhanashreeBhat_CV.pdf"
+                download="docs/DhanashreeBhat_CV.pdf"
                 className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-4 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-indigo-600/20 transition-all"
               >
                 <Download size={18} />
