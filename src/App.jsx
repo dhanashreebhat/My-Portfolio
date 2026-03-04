@@ -1292,50 +1292,52 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <section id="contacts" className="py-24 bg-slate-900/30 relative z-10">
-        <footer className="py-20 border-t border-slate-900 text-center relative z-10">
-          <div className="container mx-auto px-6">
-            <motion.h2
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl font-bold mb-8 tracking-tighter"
+
+      <footer
+        id="contacts"
+        className="py-20 border-t border-slate-900 text-center relative z-10"
+      >
+        <div className="container mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold mb-8 tracking-tighter"
+          >
+            Get in touch
+          </motion.h2>
+
+          <div className="flex flex-col gap-2">
+            <a
+              href={`mailto:${LINKS.email}?subject=Portfolio%20Contact`}
+              className="inline-flex items-center justify-center gap-2 text-indigo-400 font-bold hover:underline underline-offset-8"
             >
-              Get in touch
-            </motion.h2>
+              <Mail size={18} /> {LINKS.email}
+            </a>
+            <a
+              href={LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
+            >
+              <Linkedin size={18} /> LinkedIn
+            </a>
 
-            <div className="flex flex-col gap-2">
-              <a
-                href={`mailto:${LINKS.email}?subject=Portfolio%20Contact`}
-                className="inline-flex items-center justify-center gap-2 text-indigo-400 font-bold hover:underline underline-offset-8"
-              >
-                <Mail size={18} /> {LINKS.email}
-              </a>
-              <a
-                href={LINKS.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
-              >
-                <Linkedin size={18} /> LinkedIn
-              </a>
-
-              <a
-                href={LINKS.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
-              >
-                <Github size={18} /> GitHub Profile
-              </a>
-            </div>
-
-            <p className="mt-12 text-[10px] uppercase tracking-[0.3em] text-slate-600 font-black">
-              © 2026 Dhanashree Bhat • Germany
-            </p>
+            <a
+              href={LINKS.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
+            >
+              <Github size={18} /> GitHub Profile
+            </a>
           </div>
-        </footer>
-      </section>
+
+          <p className="mt-12 text-[10px] uppercase tracking-[0.3em] text-slate-600 font-black">
+            © 2026 Dhanashree Bhat • Germany
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
