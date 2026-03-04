@@ -33,7 +33,7 @@ const LINKS = {
   email: "dhanashreebhat10@gmail.com",
   github: "https://github.com/dhanashreebhat",
   linkedin: "http://linkedin.com/in/dhanashree-bhat",
-  cv: "public/DhanashreeBhat_CV.pdf",
+  cv: `${import.meta.env.BASE_URL}DhanashreeBhat_CV.pdf`,
 };
 
 /* =========================
@@ -669,7 +669,8 @@ function Navbar({ scrolled }) {
             Hobbies
           </a>
           <a
-            href={`mailto:${LINKS.email}?subject=Portfolio%20Contact`}
+            href="#contacts"
+            // href={`mailto:${LINKS.email}?subject=Portfolio%20Contact`}
             className="text-indigo-400"
           >
             Contact
@@ -902,7 +903,7 @@ export default function App() {
 
             <div className="relative w-52 h-72 md:w-72 md:h-[26rem] rounded-[2rem] overflow-hidden border-2 border-slate-800 bg-slate-900 shadow-2xl">
               <img
-                src="public/headshot.jpeg"
+                src={`${import.meta.env.BASE_URL}headshot.jpeg`}
                 alt="Dhanashree Bhat"
                 className="w-full h-full object-cover object-[50%_8%] scale-[1.02] contrast-105 brightness-95 transition-transform duration-700 group-hover:scale-105"
               />
@@ -1291,48 +1292,50 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 border-t border-slate-900 text-center relative z-10">
-        <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold mb-8 tracking-tighter"
-          >
-            Get in touch
-          </motion.h2>
+      <section id="contacts" className="py-24 bg-slate-900/30 relative z-10">
+        <footer className="py-20 border-t border-slate-900 text-center relative z-10">
+          <div className="container mx-auto px-6">
+            <motion.h2
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold mb-8 tracking-tighter"
+            >
+              Get in touch
+            </motion.h2>
 
-          <div className="flex flex-col gap-2">
-            <a
-              href={`mailto:${LINKS.email}?subject=Portfolio%20Contact`}
-              className="inline-flex items-center justify-center gap-2 text-indigo-400 font-bold hover:underline underline-offset-8"
-            >
-              <Mail size={18} /> {LINKS.email}
-            </a>
-            <a
-              href={LINKS.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
-            >
-              <Linkedin size={18} /> LinkedIn
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href={`mailto:${LINKS.email}?subject=Portfolio%20Contact`}
+                className="inline-flex items-center justify-center gap-2 text-indigo-400 font-bold hover:underline underline-offset-8"
+              >
+                <Mail size={18} /> {LINKS.email}
+              </a>
+              <a
+                href={LINKS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
+              >
+                <Linkedin size={18} /> LinkedIn
+              </a>
 
-            <a
-              href={LINKS.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
-            >
-              <Github size={18} /> GitHub Profile
-            </a>
+              <a
+                href={LINKS.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-indigo-400 mt-4"
+              >
+                <Github size={18} /> GitHub Profile
+              </a>
+            </div>
+
+            <p className="mt-12 text-[10px] uppercase tracking-[0.3em] text-slate-600 font-black">
+              © 2026 Dhanashree Bhat • Germany
+            </p>
           </div>
-
-          <p className="mt-12 text-[10px] uppercase tracking-[0.3em] text-slate-600 font-black">
-            © 2026 Dhanashree Bhat • Germany
-          </p>
-        </div>
-      </footer>
+        </footer>
+      </section>
     </div>
   );
 }
